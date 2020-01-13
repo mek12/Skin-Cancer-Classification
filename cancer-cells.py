@@ -77,7 +77,7 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes,activation="softmax"))
 model.summary()
 
-optimizer= Adam(lr = 0.0001)
+optimizer= Adam(lr = 0.001)
 model.compile(optimizer=optimizer, loss="categorical_crossentropy", metrics= ["accuracy"])
 
 epochs=5
@@ -85,7 +85,7 @@ batch_size=25
 
 history = model.fit(x=x_train, y=y_train, batch_size=batch_size, epochs=epochs, verbose=1, shuffle=True)
 
-model.save("my_model2.h5")
+model.save("my_model1.h5")
 
 # lr'ye 1 0 daha ekle model 2 diye kaydet 
 
